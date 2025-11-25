@@ -12,6 +12,13 @@ text-decoration: none;
 cursor: pointer;
 }
 
+.active{
+    color: rgb(211, 130, 31);
+    font-weight: bold;
+text-decoration: none;
+cursor: pointer;
+}
+
 a:hover{
     color:orange;
 }
@@ -29,4 +36,8 @@ a:hover{
     color: rgb(113, 39, 122);
     display: flex;
     justify-content: center;
+}
+
+.btn{
+    background-color: rgb(149, 158, 240);
 }
