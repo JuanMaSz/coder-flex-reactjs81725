@@ -1,12 +1,12 @@
 const products = [
     {
         id:'01',
-        name:'Random 1',
-        description:'No se',
+        name:'Teclado RGB',
+        description:'Este teclado gamer retroiluminado es ideal para jugadores que buscan estilo y funcionalidad. Ofrece iluminación RGB y conexión estable mediante cable USB, brindando precisión y durabilidad en cada partida. Su construcción resistente y su efecto de luces dinámicas elevan la experiencia de juego, combinando rendimiento y estética en un solo periférico.',
         stock:5,
         price:19000,
         category:'nuevos',
-        img:'http://picsum.photos/198'
+        img:'https://acdn-us.mitiendanube.com/stores/001/593/430/products/1-2caf107220a4a2c03717659126237396-1024-1024.webp'
     },
     {
         id:'02',

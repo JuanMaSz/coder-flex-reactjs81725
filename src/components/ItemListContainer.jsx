@@ -1,24 +1,35 @@
 import { useEffect, useState } from "react"
-import { getProducts } from "../mock/Asynmock"
 import { ItemList } from "./ItemList"
 import { useParams } from "react-router-dom"
-
+import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from "../service/firebase"
 
 const ItemListContainer = ({mensaje}) => {
     const[data, setData] = useState([])
+    const [loading, setLoading] = useState(false)
     const {type}= useParams()
 
     useEffect(()=>{
-        getProducts()
-        .then((res) => {
-            if (type) {
-                setData(res.filter((prod) => prod.category === type))
-            } else {
-                setData(res)
-            }
+        setLoading(true)
+        const prodCollection = collection(db, "products")
+        const q = type ? query(prodCollection, where("category", "==", type)) : prodCollection
+
+        getDocs(q)
+        .then((res)=>{
+            const list = res.docs.map((doc)=>{
+                return{
+                    id:doc.id,
+                    ...doc.data()
+                }
+            })
+            setData(list)
         })
-        .catch((error)=> console.log(error))
+        .catch((error)=>console.log(error))
+        .finally(()=> setLoading(false))
     },[type])
+
+    if(loading) return <h2>Cargando...</h2>
+
     return(
         <div>
             <h1 className="msj-bienvenida">{mensaje}</h1>

@@ -1,7 +1,30 @@
 * {
-  font-family: AncizarSans;
-  src: url(../src/assets/fonts/AncizarSans-Regular.ttf);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin:0;
   padding:0;
   box-sizing: border-box;
+  color: whitesmoke;
+}
+
+body {
+  background-color: #0b0b15 !important; 
+  color: whitesmoke;
+  min-height: 100vh; 
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardItem{
+  background-color: #1e1e2d !important;
+  color: white !important;
+  height: 450px; /* Ajusta este valor según la altura máxima de tu contenido */
+  border-color: #3f51b5 !important;
+}
+
+.cardPrice{
+  color: #8e8ea6 !important
 }

@@ -1,5 +1,6 @@
+
 .nav-container{
-    background-color: rgba(77, 22, 88, 0.904);
+    background-color: rgb(8, 73, 172);
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -7,9 +8,12 @@
 }
 
 .pages{
-color: rgb(240, 231, 220);
+color: rgb(240, 238, 235);
 text-decoration: none;
 cursor: pointer;
+border: 2px solid black;
+border-radius: 4px;
+padding: 5px;
 }
 
 .active{
@@ -24,7 +28,7 @@ a:hover{
 }
 
 .logo{
-    width: 8rem;
+    width: 4rem;
 
 }
 
@@ -32,8 +36,10 @@ a:hover{
     width: 2rem;
 }
 
+
+
 .msj-bienvenida{
-    color: rgb(113, 39, 122);
+    color: white;
     display: flex;
     justify-content: center;
 }
